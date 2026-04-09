@@ -1,6 +1,6 @@
 cask "mindrelay" do
-  version "0.1.0"
-  sha256 "56d6115a3aca0da2c001a32ebd2e993e8edf427e661dca37bb339e74de84819b"
+  version "0.2.0"
+  sha256 "e6655f9fa7956611e329384bab427880c90b8deef7488d07a51bbb2ba8e339cb"
 
   url "https://github.com/pruizlezcano/MindRelay/releases/download/v#{version}/MindRelay-#{version}.dmg"
   name "MindRelay"
@@ -15,6 +15,7 @@ cask "mindrelay" do
   depends_on macos: ">= :tahoe"
 
   app "MindRelay.app"
+  binary "#{appdir}/MindRelay.app/Contents/Resources/mindrelay"
 
   zap trash: [
     "~/Library/Logs/com.pruizlezcano.MindRelay",
